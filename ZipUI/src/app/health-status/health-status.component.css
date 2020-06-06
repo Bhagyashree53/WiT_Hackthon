@@ -56,10 +56,26 @@ input[type=submit]:hover {
     flex: 1; /* Standard syntax */
     padding: 10px;
 }
-.dot {
+.dot_green {
     height: 25px;
     width: 25px;
     background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .dot_yellow {
+    height: 25px;
+    width: 25px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .dot_red {
+    height: 25px;
+    width: 25px;
+    background-color: red;
     border-radius: 50%;
     display: inline-block;
   }
