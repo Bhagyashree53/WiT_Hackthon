@@ -58,6 +58,8 @@ import { HealthResultComponent } from './health-status-result/health-result.comp
 import { OccupancyTableComponent } from './occupancy-table/occupancy-table.component';
 import { SeatRequestComponent } from './seat-request/seat-request.component';
 import { SeatRequestWarnDialog, SeatRequestFailedDialog, SeatRequestSuccessDialog } from './seat-request/dialog-seat-request';
+import { SeatMapComponent } from './seat-map/seat-map.component';
+import {UpdateConfirmDialogue} from './seat-map/dialogue-popup';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +73,9 @@ import { SeatRequestWarnDialog, SeatRequestFailedDialog, SeatRequestSuccessDialo
     SeatRequestComponent,
     SeatRequestWarnDialog,    
     SeatRequestFailedDialog,
-    SeatRequestSuccessDialog
+    SeatRequestSuccessDialog,
+    SeatMapComponent,
+    UpdateConfirmDialogue
   ],
   imports: [
     BrowserModule,
@@ -131,7 +135,7 @@ import { SeatRequestWarnDialog, SeatRequestFailedDialog, SeatRequestSuccessDialo
     ScrollingModule,
   ],
   providers: [],
-  entryComponents: [HealthResultComponent, SeatRequestWarnDialog, SeatRequestFailedDialog, SeatRequestSuccessDialog],
+  entryComponents: [HealthResultComponent, SeatRequestWarnDialog, SeatRequestFailedDialog, SeatRequestSuccessDialog,UpdateConfirmDialogue],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
