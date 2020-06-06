@@ -1,0 +1,35 @@
+
+<mat-card>
+    <table>
+        <tr >
+            <td *ngFor="let seat of Seats | slice:0:4" >
+                <button class="button_space" mat-mini-fab [color]="seat.availability === 0 ? 'warn' : 'Primary'" (click)="change(seat)">
+                    <mat-icon>event_seat</mat-icon>
+                    </button>
+                <p class ="seatNum">{{seat.seatNumber}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td  *ngFor="let seat of Seats | slice:4:8">
+                <button class="button_space" mat-mini-fab [color]="seat.availability === 0 ? 'warn' : 'Primary'" (click)="change(seat)" >
+                    <mat-icon>event_seat</mat-icon>
+                </button>
+                <p class ="seatNum">{{seat.seatNumber}}</p> 
+            </td>
+        </tr>
+        <tr>
+            <td  *ngFor="let seat of Seats | slice:8:12">
+                <button class="button_space" mat-mini-fab [color]="seat.availability === 0 ? 'warn' : 'Primary'" (click)="change(seat)">
+                    <mat-icon>event_seat</mat-icon>
+                </button>
+                <p class ="seatNum">{{seat.seatNumber}}</p> 
+            </td>
+        </tr>
+    </table>
+</mat-card>
+
+<mat-card>
+    <div class="updateButton" >
+        <button mat-raised-button color="primary" (click)="UpdateSeatAvailability()">Update Seat Occupancy</button>
+      </div>
+</mat-card>
