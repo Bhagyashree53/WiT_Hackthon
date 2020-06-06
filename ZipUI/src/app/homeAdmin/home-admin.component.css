@@ -1,0 +1,26 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  
+  .seat-request-container{
+   margin:20px;
+}
+
+.seat-request-container .mat-form-field + .mat-form-field{
+   margin-left:20px;
+}
+
+.seat-request-container .mat-raised-button{
+   height:45px;
+   margin-left: 25px;
+}
+
+.mat-raised-button:disabled[disabled]{
+   color:white;
+   background-color: grey;
+}
+.mat-card{
+   margin: 10px;
+}

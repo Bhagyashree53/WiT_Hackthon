@@ -1,0 +1,38 @@
+<div class="seat-request-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Please select Required Area </mat-card-title>
+      </mat-card-header>
+      
+      <form #checkSeatsForm="ngForm" (ngSubmit)="isSeatsAvailable(checkSeatsForm.form);">
+      
+        <mat-form-field appearance="fill">
+          <mat-label>Select Floor No</mat-label>
+          <mat-select matInput required name="floor" ngModel #floor="ngModel">
+            <mat-option *ngFor="let seat of seats" [value]="seat.floor">
+                {{seat.floor}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Select Section</mat-label>
+          <mat-select matInput required name="section" ngModel #section="ngModel">
+              <mat-option *ngFor="let seat of seats" [value]="seat.section">
+                  {{seat.section}}
+              </mat-option>
+          </mat-select>            
+        </mat-form-field>
+  
+        <button mat-raised-button  color="primary" [disabled]="!checkSeatsForm.valid">Search Seat</button>
+        </form>
+    </mat-card>
+
+    <mat-card *ngIf="showSeats">
+      <mat-card-header>
+        <mat-card-title>Available Seats : {{availableSeats}}</mat-card-title>
+        <mat-card-subtitle>You can request seat</mat-card-subtitle>
+      </mat-card-header>
+
+      <button mat-raised-button type="submit" color="primary" (click)="validateAndBookSeat()">Request</button>
+    </mat-card>         
+  </div>

@@ -1,0 +1,62 @@
+<div class="flex-container">
+
+  <div class="toolbar column" style="display: inline-block;" role="banner">
+    <div class="container">
+      <form>
+        <div style="display: inline-flex;width: 100%;">
+          <div style="width: 30%;">
+            <label for="fname">Employee PID</label>
+          </div>
+          <div style="width: 70%;"><input style="margin-top: -1px;" [(ngModel)] = "health.userName" type="text" id="fname" name="firstname" disabled="true"
+              value="test" placeholder="test"></div>
+        </div>
+        <fieldset>
+          <legend>Health Parameters:</legend>
+          <label for="temparature">Temparature(in degree celcius)</label>
+          <input type="number" id="temparature" [(ngModel)] = "health.temparature" name="temparature" placeholder="">
+
+          <label for="bp">Blood Pressure</label>
+          <input type="number" id="bp" name="bp" [(ngModel)] = "health.bloodPressure" placeholder="">
+
+          <label for="spo2">SPO2</label>
+          <input type="number" id="spo2"  [(ngModel)] = "health.spo2" name="spo2" placeholder="">
+
+          <div style="display: inline-flex;width: 100%;" >
+            <div style="width: 50%; margin-right: 5px;">
+              <label for="dryCough">Dry Cough</label>
+              <select id="dryCough" name="dryCough" [(ngModel)] = "health.dryCough">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+              </select>
+
+            </div>
+            <div style="width: 50%;">
+              <label for="headache">Headache</label>
+              <select id="headache" name="headache" [(ngModel)] = "health.headache">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+              </select></div>
+          </div>
+
+          <label for="subject">Health conditions other than listed above :</label>
+          <textarea id="subject" name="subject" placeholder="" style="height:80px"></textarea>
+        </fieldset>
+        <input class="submit" (click)="openDialog()" value="Evaluate Health Condition" style="margin-top: 5px;">
+      </form>
+    </div>
+
+  </div>
+  <div class="toolbar column">
+    <div class="container">
+      <fieldset>
+        <legend>Latest updated Status</legend>
+        <label>Updated Date</label>
+        <input type="text" id="lname" name="lastname" [(ngModel)] = "health.lastUpdatedDate" disabled="true" placeholder="06/04/2020">
+        <div><span class="dot"></span>
+          <div style="margin-left: 53px; margin-top: -26px;">Healthy</div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+</div>

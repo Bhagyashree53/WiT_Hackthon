@@ -1,0 +1,12 @@
+table {
+    width: 50%;
+    margin: 20px auto;
+  }
+
+  .mat-column-select {
+    overflow: initial;
+  }
+  .updateButton button{
+    margin-bottom:10px;
+    margin-left: 10px;
+  }

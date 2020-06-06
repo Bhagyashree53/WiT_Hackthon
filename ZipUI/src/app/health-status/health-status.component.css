@@ -1,0 +1,65 @@
+.main-div mat-card{
+  padding: 0px;
+  margin-top: 25px;
+}
+.health-form{
+  padding: 15px;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  resize: vertical;
+}
+input[type=number], select, textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  resize: vertical;
+}
+.submit {
+  background-color: #3f51b5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #46a1a1;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: 5px;
+}
+
+.flex-container{
+    display: flex; /* Standard syntax */
+}
+.flex-container .column{
+   
+    flex: 1; /* Standard syntax */
+    padding: 10px;
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+  }

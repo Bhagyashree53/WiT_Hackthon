@@ -1,0 +1,22 @@
+.seat-request-container {
+    margin: 20px;
+}
+
+.mat-form-field{
+    /* margin-top: 10px; */
+    margin-left: 10px;
+}
+.seat-request-container .mat-raised-button{
+    height: 45px;
+    margin-left: 15px;
+}
+
+.mat-raised-button:disabled[disabled]{
+    color: white;
+    background-color: grey;
+}
+.mat-card {
+    width: 60%;
+    margin-bottom: 20px;
+    border: 0.5px solid lightgray;
+}

@@ -1,0 +1,32 @@
+
+input[type=text], select, textarea {
+    width: 30%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    resize: vertical;
+  }
+  
+  .button {
+    background-color:#3f51b5; /* Green */
+    border-radius: 4px;
+    color: white;
+    height: 35px;
+    margin-left: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .mat-header-cell {    text-align: center;    }
+  .mat-cell {text-align: center;}
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+    border: 1px;
+  }

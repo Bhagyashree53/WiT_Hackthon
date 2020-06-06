@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+  <span>Corporate Employee Suite</span>
+      <span class="example-fill-remaining-space"></span>
+      <button (click)="logout()"  mat-raised-button matTooltip="Logout" data-inline="false">Logout</button>
+      <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon> 
+  </button>-->
+  <!-- <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu> -->
+   </mat-toolbar-row></mat-toolbar>
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="Health Status"><app-health-status></app-health-status></mat-tab>
+  <mat-tab label="Request Seat"><seat-request></seat-request></mat-tab>
+</mat-tab-group>
