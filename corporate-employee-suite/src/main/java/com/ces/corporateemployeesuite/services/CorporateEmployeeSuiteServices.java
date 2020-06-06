@@ -1,7 +1,9 @@
 package com.ces.corporateemployeesuite.services;
 
 import com.ces.corporateemployeesuite.entity.HealthIndex;
+import com.ces.corporateemployeesuite.entity.Seat;
 import com.ces.corporateemployeesuite.repository.HealthIndexRepository;
+import com.ces.corporateemployeesuite.repository.SeatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -28,6 +30,9 @@ public class CorporateEmployeeSuiteServices  {
 
     @Autowired
     private HealthIndexRepository healthIndexRepository;
+
+    @Autowired
+    private SeatRepository seatRepository;
     public HealthIndex evaluateHeathStatus(HealthIndex healthData) {
 
         healthData.setStatus(getHealthStatus(healthData));
@@ -55,5 +60,9 @@ public class CorporateEmployeeSuiteServices  {
             status = "yellow";
         }
         return status;
+    }
+
+    public List<Seat> getAllAvailableSeats(String floor, String section) {
+        return seatRepository.findAll();
     }
 }
