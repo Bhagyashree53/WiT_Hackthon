@@ -43,7 +43,9 @@ CREATE TABLE  Employee (
   UserName VARCHAR(25)  PRIMARY KEY,
   First_Name VARCHAR(50) NOT NULL,
   Last_Name VARCHAR(50) NOT NULL,
-  Department VARCHAR(50) NOT NULL
+  Department VARCHAR(50) NOT NULL,
+  Password varchar(50),
+  Role varchar(25)
 );
 
 

@@ -16,6 +16,7 @@ public class CorporateEmployeeSuiteController {
 
     @Autowired
     private CorporateEmployeeSuiteServices corporateEmployeeSuiteServices;
+
     @PostMapping("/healthIndex")
     public HealthIndex evaluateHealthStatus(@RequestBody HealthIndex healthData) {
         System.out.print(healthData);
@@ -27,4 +28,17 @@ public class CorporateEmployeeSuiteController {
         List<Seat> seats = corporateEmployeeSuiteServices.getAllAvailableSeats(floor, section);
         return seats;
     }
+
+    @GetMapping("/getAllAvailableSeatsEmployee")
+    public List<Seat> getAllAvailableSeatsEmployee(@RequestParam String floor, @RequestParam String section) {
+        List<Seat> seats = corporateEmployeeSuiteServices.getAllAvailableSeatsEmployee(floor, section);
+        return seats;
+    }
+
+    @GetMapping("/updateEmployeeSeat")
+    public String updateEmployeeSeat(@RequestParam String floor, @RequestParam String section, @RequestParam String userName) {
+        return corporateEmployeeSuiteServices.updateEmployeeSeat(floor, section, userName);
+    }
+
+
 }

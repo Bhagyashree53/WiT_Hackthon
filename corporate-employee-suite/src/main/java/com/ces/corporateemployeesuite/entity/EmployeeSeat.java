@@ -16,11 +16,20 @@ public class EmployeeSeat {
     @Id
     @GeneratedValue
     private Integer id;
+    private String userName;
     private String Floor ;
     private String Section ;
     private String SeatNumber ;
     private Timestamp login;
     private Timestamp logout;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public String getFloor() {
         return Floor;
@@ -65,7 +74,9 @@ public class EmployeeSeat {
     @Override
     public String toString() {
         return "EmployeeSeat{" +
-                "Floor='" + Floor + '\'' +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", Floor='" + Floor + '\'' +
                 ", Section='" + Section + '\'' +
                 ", SeatNumber='" + SeatNumber + '\'' +
                 ", login=" + login +

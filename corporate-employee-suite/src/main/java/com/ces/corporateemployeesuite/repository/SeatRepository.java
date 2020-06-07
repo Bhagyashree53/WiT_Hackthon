@@ -17,4 +17,7 @@ public interface SeatRepository extends JpaRepository<Seat, Integer> {
 
     @Query("SELECT e from Seat e where e.Floor =:Floor and e.Section = :Section")       // using @query
     List<Seat> findByFloorandSection(@Param("Floor") String Floor, @Param("Section") String Section);
+
+    @Query("select e from Seat e where e.Section = :Section and e.Floor = :Floor and e.UserAllocated = 0")
+    List<Seat> findSeatsEmployee(@Param("Floor") String Floor, @Param("Section") String Section);
 }
