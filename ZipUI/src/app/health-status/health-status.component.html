@@ -3,13 +3,10 @@
   <div class="toolbar column" style="display: inline-block;" role="banner">
     <div class="container">
       <form>
-        <div style="display: inline-flex;width: 100%;">
-          <div style="width: 30%;">
-            <label for="fname">Employee PID</label>
-          </div>
-          <div style="width: 70%;"><input style="margin-top: -1px;" [(ngModel)] = "health.userName" type="text" id="fname" name="firstname" disabled="true"
-              value="test" placeholder="test"></div>
-        </div>
+        <mat-card style="width: 100%;">
+            <mat-label for="fname">Employee PID</mat-label>
+          <mat-label style="margin-left: 150px;"> {{user}}</mat-label>
+        </mat-card>
         <fieldset>
           <legend>Health Parameters:</legend>
           <label for="temparature">Temparature(in degree celcius)</label>
