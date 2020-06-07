@@ -131,4 +131,14 @@ public class CorporateEmployeeSuiteServices  {
         Timestamp ts = new Timestamp(time);
         return  ts;
     }
+    
+    public boolean updateAvailableSeats(@RequestParam List<Seat> seats) {
+        boolean result=true;
+        for ( Seat seat :seats)
+        {
+            result=seatRepository.updateSeatAllocation(seat.getId(), seat.isUserAllocated());
+        }
+        return result;
+    }
 }
+
