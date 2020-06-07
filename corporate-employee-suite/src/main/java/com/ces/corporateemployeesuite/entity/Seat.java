@@ -22,6 +22,9 @@ public class Seat {
     private boolean UserAllocated ;
 
 
+    public int getId(){
+        return id;
+    }
     public String getFloor() {
         return Floor;
     }
