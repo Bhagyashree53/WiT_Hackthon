@@ -63,6 +63,6 @@ public class CorporateEmployeeSuiteServices  {
     }
 
     public List<Seat> getAllAvailableSeats(String floor, String section) {
-        return seatRepository.findAll();
+        return seatRepository.findByFloorandSection(floor, section);
     }
 }

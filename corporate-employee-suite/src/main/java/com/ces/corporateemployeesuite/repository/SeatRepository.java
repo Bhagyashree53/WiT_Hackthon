@@ -15,6 +15,6 @@ import java.util.List;
 @Repository
 public interface SeatRepository extends JpaRepository<Seat, Integer> {
 
-    @Query("SELECT e from Seat e where e.Floor =:Floor and e.Section = :Section ")       // using @query
+    @Query("SELECT e from Seat e where e.Floor =:Floor and e.Section = :Section")       // using @query
     List<Seat> findByFloorandSection(@Param("Floor") String Floor, @Param("Section") String Section);
 }
