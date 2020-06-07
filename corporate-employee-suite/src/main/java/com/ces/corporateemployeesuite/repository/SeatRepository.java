@@ -20,4 +20,8 @@ public interface SeatRepository extends JpaRepository<Seat, Integer> {
 
     @Query("select e from Seat e where e.Section = :Section and e.Floor = :Floor and e.UserAllocated = 0")
     List<Seat> findSeatsEmployee(@Param("Floor") String Floor, @Param("Section") String Section);
+    
+    @Query("Update Seat s set s.UserAllocated=:allocation where s.id=:id")
+    boolean updateSeatAllocation(@Param("id") int id, @Param("UserAllocated") boolean allocation);
+
 }
