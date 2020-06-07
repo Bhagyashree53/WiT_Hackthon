@@ -33,6 +33,7 @@ export class HealthStatusComponent implements OnInit {
   constructor(private router: Router, private matDialog: MatDialog, private healthService: HealthService) { }
 
   ngOnInit() {
+    this.user=sessionStorage.getItem("name");
     this.initForm();
   }
   initForm() {
@@ -48,7 +49,7 @@ export class HealthStatusComponent implements OnInit {
 
   openDialog() {
     console.log(this.health)
-    this.health.userName = "test"
+    this.health.userName = this.user;
     this.health.dryCough = parseInt(this.health.dryCough);
     this.health.headache = parseInt(this.health.headache);
     this.healthService.evaluateHealthCondition(this.health).subscribe((data: HealthIndex) => {
