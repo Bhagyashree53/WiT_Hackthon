@@ -1,0 +1,18 @@
+This repository contains source code for Corporate Employee Suite both backend and frontend.
+
+1) corporate-employee-suite : Backend code
+	We have used spring boot framework for application development and the database used is H2. 
+	To deploy the application follow below steps :
+	1) do mvn clean install (maven used as build tool, java 8)
+	2) Run the main Application CorporateEmployeeSuiteApplication.java as spring boot application
+	3) The services will be available at the endpoint http://<host>:8081/ by default
+	The CI/CD toolchain has been created for the app in IBM cloud as well
+
+2) ZipUI : Front-end code
+	The ui is developed in angular 8 and for UI rich components we have used angular material library.
+	To deploy the fron-end follow below steps :
+	1) do npm install (nodejs and angular cli prerequesite for angular app developement)
+	2) do ng serve
+	3) UI will be up and running at http://<host>:4200/ by default
+	The CI/CD toolchain has been created for the same and deployed on IBM cloud at below URL:
+	https://angular-wit-demo-build-deploy.eu-gb.mybluemix.net
