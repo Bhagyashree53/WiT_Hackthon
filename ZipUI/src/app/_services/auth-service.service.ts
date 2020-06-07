@@ -24,6 +24,7 @@ export class AuthServiceService {
     for(this.value of this.userData){
       if(data.username === this.value.username){
                   if(data.password === this.value.password){
+                    sessionStorage.setItem("name",this.value.username);
                     return of(this.value.role);
                   }
                   else{
