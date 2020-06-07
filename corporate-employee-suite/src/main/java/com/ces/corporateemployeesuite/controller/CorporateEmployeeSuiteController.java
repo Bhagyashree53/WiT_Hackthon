@@ -40,5 +40,10 @@ public class CorporateEmployeeSuiteController {
         return corporateEmployeeSuiteServices.updateEmployeeSeat(floor, section, userName);
     }
 
+    @PostMapping("/updateAvailableSeats")
+    public boolean updateAvailableSeats(@RequestParam List<Seat> seats) {
+        boolean result=corporateEmployeeSuiteServices.updateAvailableSeats(seats);
+        return result;
+    }
 
 }
