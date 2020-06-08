@@ -1,0 +1,7 @@
+---
+applications :
+- name: "wit-hackathon-demo"
+  path : "dist/wit-demo"
+  memory : 32M
+  buildpack :
+  - "https://github.com/cloudfoundry/staticfile-buildpack.git"
