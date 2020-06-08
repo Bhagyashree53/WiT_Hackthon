@@ -20,6 +20,8 @@ export class HomeAdminComponent implements OnInit {
 
   selectedValue: string;
   selectedCar: string;
+  selectedFloor: string;
+  selectedSection: string;
   public loadTablevar:boolean = false;
   public isDisabledselectSection = true;
   public isDisabledloadbutton =  false;
@@ -45,6 +47,7 @@ export class HomeAdminComponent implements OnInit {
     console.log("change");
     this.isDisabledselectSection = false;
   }
+  
   ngOnInit() {
   }
   

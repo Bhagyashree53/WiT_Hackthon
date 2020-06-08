@@ -16,7 +16,13 @@ export class AuthServiceService {
         username: 'test',
         password: 'test',
         role: 'user'
-     }
+     },
+     {
+      username: 'admin',
+      password: 'admin',
+      role: 'admin'
+    }
+
   ];
   value: any = {};
   constructor() { }

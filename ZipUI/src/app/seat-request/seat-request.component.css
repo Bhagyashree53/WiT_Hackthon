@@ -3,9 +3,9 @@
 }
 
 .mat-form-field{
-    /* margin-top: 10px; */
     margin-left: 10px;
 }
+
 .seat-request-container .mat-raised-button{
     height: 45px;
     margin-left: 15px;
@@ -18,5 +18,10 @@
 .mat-card {
     width: 60%;
     margin-bottom: 20px;
-    border: 0.5px solid lightgray;
 }
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 1px -1px #3f51b5, 
+                0 1px 1px 0 #3f51b5, 
+                0 1px 3px 0 #3f51b5;
+ }

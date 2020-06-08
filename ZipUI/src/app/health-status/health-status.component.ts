@@ -18,7 +18,8 @@ import { HealthService } from '../_services/health.service';
 export class HealthStatusComponent implements OnInit {
   formGroup: FormGroup;
   model: any = {};
-  private health: HealthIndex = {
+  user: string;
+  health: HealthIndex = {
     userName: "",
     first_Name: "test",
     last_Name: "test",
@@ -48,18 +49,25 @@ export class HealthStatusComponent implements OnInit {
   }
 
   openDialog() {
-    console.log(this.health)
-    this.health.userName = this.user;
-    this.health.dryCough = parseInt(this.health.dryCough);
-    this.health.headache = parseInt(this.health.headache);
-    this.healthService.evaluateHealthCondition(this.health).subscribe((data: HealthIndex) => {
-      console.log(data);
-      this.health = data;
+    this.health.status = 'Green';
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.data = this.health;
+    this.matDialog.open(HealthResultComponent, dialogConfig);
 
-      const dialogConfig = new MatDialogConfig();
-      dialogConfig.data = this.health
-      this.matDialog.open(HealthResultComponent, dialogConfig);
-    });
+
+
+    // console.log(this.health)
+    // this.health.userName = this.user;
+    // this.health.dryCough = parseInt(this.health.dryCough);
+    // this.health.headache = parseInt(this.health.headache);
+    // this.healthService.evaluateHealthCondition(this.health).subscribe((data: HealthIndex) => {
+    //   console.log(data);
+    //   this.health = data;
+
+    //   const dialogConfig = new MatDialogConfig();
+    //   dialogConfig.data = this.health
+    //   this.matDialog.open(HealthResultComponent, dialogConfig);
+    // });
   }
 
 }

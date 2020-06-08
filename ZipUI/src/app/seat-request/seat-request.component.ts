@@ -46,18 +46,18 @@ export class SeatRequestComponent implements OnInit {
     validateAndBookSeat() {
         //backend service call - get values healthStatus & healthStatusValid
         
-        this.healthStatus = false;
-        this.healthStatusValid = false;
+        this.healthStatus = true;
+        this.healthStatusValid = true;
 
-        if(this.healthStatusValid === false) {
-            this.dialog.open(SeatRequestWarnDialog);
-            return;
-        }
+        // if(this.healthStatusValid === false) {
+        //     this.dialog.open(SeatRequestWarnDialog);
+        //     return;
+        // }
 
-        if(this.healthStatus === false) {
-            this.dialog.open(SeatRequestFailedDialog);
-            return;
-        }
+        // if(this.healthStatus === false) {
+        //     this.dialog.open(SeatRequestFailedDialog);
+        //     return;
+        // }
 
         if(this.healthStatus === true && this.healthStatus === true) {
             //backend service call to book seat use floor & section

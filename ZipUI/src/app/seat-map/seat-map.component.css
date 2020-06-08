@@ -6,6 +6,11 @@
      margin-right:60px;
  }
 
+
+ .table {
+    table-layout: fixed; margin:40px auto 0px auto; 
+}
+
  .button_space{
     margin-left :60px;
     margin-top: 20px;

@@ -49,8 +49,13 @@
       <fieldset>
         <legend>Latest updated Status</legend>
         <label>Updated Date</label>
-        <input type="text" id="date" name="date" [(ngModel)] = "health.lastUpdatedDate" disabled="true" >
-        <div  [ngSwitch]="health.status">
+        <!-- <input type="text" id="date" name="date" [(ngModel)] = "health.lastUpdatedDate" disabled="true" > -->
+        <input type="text" id="lname" name="lastname" [(ngModel)] = "health.lastUpdatedDate" disabled="true" placeholder="06/04/2020">
+        <div><span class="dot_green"></span>
+          <div style="margin-left: 53px; margin-top: -26px;">Healthy</div>
+        </div>
+
+        <!-- <div  [ngSwitch]="health.status">
           <div *ngSwitchCase= "'green'"><span class="dot_green"></span>
             <div style="margin-left: 53px; margin-top: -26px;">Healthy</div>
           </div>
@@ -60,7 +65,7 @@
           <div *ngSwitchCase="'red'"><span class="dot_red"></span>
             <div style="margin-left: 53px; margin-top: -26px;">Take rest (Not Healthy)</div>
           </div>
-        </div>
+        </div> -->
       </fieldset>
     </div>
   </div>
